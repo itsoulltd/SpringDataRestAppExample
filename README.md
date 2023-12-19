@@ -13,3 +13,8 @@
 
 ####To Stop Docker
     ~>$ killall Docker
+
+####[H2-DB Console](http://localhost:8080/h2-console)
+    
+    username:sa
+    pass:sa

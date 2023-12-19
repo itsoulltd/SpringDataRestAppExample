@@ -10,9 +10,9 @@ import java.util.*;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
 
-public class DataRestClientTest {
+public class DataRestClientTestCase {
 
-    private static Logger LOG = Logger.getLogger("DataRestClientTest");
+    private static Logger LOG = Logger.getLogger("DataRestClientTestCase");
 
     public void doLoadTest() throws Exception {
         //
