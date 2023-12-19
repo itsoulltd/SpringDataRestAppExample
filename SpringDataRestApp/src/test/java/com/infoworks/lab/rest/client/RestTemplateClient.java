@@ -22,7 +22,7 @@ public class RestTemplateClient {
     public void DataRestApis() {
         //
         RestTemplate template = new RestTemplateBuilder()
-                .rootUri("http://localhost:8080/api/data")
+                .rootUri("http://localhost:8080")
                 .setConnectTimeout(Duration.ofMillis(5000))
                 .setReadTimeout(Duration.ofMillis(7000))
                 .build();
@@ -30,7 +30,7 @@ public class RestTemplateClient {
         HttpHeaders headers = new HttpHeaders();
         Map body = new HashMap();
         HttpEntity<Map> entity = new HttpEntity<>(body, headers);
-        //http://localhost:8080/api/data
+        //http://localhost:8080
         ResponseEntity<String> rs = template.exchange("/"
                 , HttpMethod.GET
                 , entity
@@ -43,7 +43,7 @@ public class RestTemplateClient {
     public void DataRestApisForPassengersType1() {
         //
         RestTemplate template = new RestTemplateBuilder()
-                .rootUri("http://localhost:8080/api/data")
+                .rootUri("http://localhost:8080")
                 .setConnectTimeout(Duration.ofMillis(5000))
                 .setReadTimeout(Duration.ofMillis(7000))
                 .build();
@@ -64,7 +64,7 @@ public class RestTemplateClient {
     public void DataRestApisForPassengersType2() {
         //
         RestTemplate template = new RestTemplateBuilder()
-                .rootUri("http://localhost:8080/api/data")
+                .rootUri("http://localhost:8080")
                 .setConnectTimeout(Duration.ofMillis(5000))
                 .setReadTimeout(Duration.ofMillis(7000))
                 .build();
@@ -107,7 +107,7 @@ public class RestTemplateClient {
     public void DataRestForPassengersByPaging() {
         //
         RestTemplate template = new RestTemplateBuilder()
-                .rootUri("http://localhost:8080/api/data")
+                .rootUri("http://localhost:8080")
                 .setConnectTimeout(Duration.ofMillis(5000))
                 .setReadTimeout(Duration.ofMillis(7000))
                 .build();
@@ -130,7 +130,7 @@ public class RestTemplateClient {
     public void createPassenger() {
         //
         RestTemplate template = new RestTemplateBuilder()
-                .rootUri("http://localhost:8080/api/data")
+                .rootUri("http://localhost:8080")
                 .setConnectTimeout(Duration.ofMillis(5000))
                 .setReadTimeout(Duration.ofMillis(7000))
                 .build();
@@ -155,7 +155,7 @@ public class RestTemplateClient {
     public void updatePassenger() {
         //
         RestTemplate template = new RestTemplateBuilder()
-                .rootUri("http://localhost:8080/api/data")
+                .rootUri("http://localhost:8080")
                 .setConnectTimeout(Duration.ofMillis(5000))
                 .setReadTimeout(Duration.ofMillis(7000))
                 .build();
@@ -179,7 +179,7 @@ public class RestTemplateClient {
     public void getPassenger() {
         //
         RestTemplate template = new RestTemplateBuilder()
-                .rootUri("http://localhost:8080/api/data")
+                .rootUri("http://localhost:8080")
                 .setConnectTimeout(Duration.ofMillis(5000))
                 .setReadTimeout(Duration.ofMillis(7000))
                 .build();
@@ -200,7 +200,7 @@ public class RestTemplateClient {
     public void deletePassenger() {
         //
         RestTemplate template = new RestTemplateBuilder()
-                .rootUri("http://localhost:8080/api/data")
+                .rootUri("http://localhost:8080")
                 .setConnectTimeout(Duration.ofMillis(5000))
                 .setReadTimeout(Duration.ofMillis(7000))
                 .build();
@@ -221,7 +221,7 @@ public class RestTemplateClient {
     public void CRUDPassenger() throws IOException {
         //
         RestTemplate template = new RestTemplateBuilder()
-                .rootUri("http://localhost:8080/api/data")
+                .rootUri("http://localhost:8080")
                 .setConnectTimeout(Duration.ofMillis(5000))
                 .setReadTimeout(Duration.ofMillis(7000))
                 .build();
@@ -277,7 +277,7 @@ public class RestTemplateClient {
     public void SearchApisInPassenger() {
         //
         RestTemplate template = new RestTemplateBuilder()
-                .rootUri("http://localhost:8080/api/data")
+                .rootUri("http://localhost:8080")
                 .setConnectTimeout(Duration.ofMillis(5000))
                 .setReadTimeout(Duration.ofMillis(7000))
                 .build();
@@ -298,7 +298,7 @@ public class RestTemplateClient {
     public void SearchPassengerByAgaLimit() {
         //
         RestTemplate template = new RestTemplateBuilder()
-                .rootUri("http://localhost:8080/api/data")
+                .rootUri("http://localhost:8080")
                 .setConnectTimeout(Duration.ofMillis(5000))
                 .setReadTimeout(Duration.ofMillis(7000))
                 .build();
