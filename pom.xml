@@ -8,7 +8,9 @@
   <name>spring-data-rest-app-example</name>
   <packaging>pom</packaging>
 
-  <modules></modules>
+  <modules>
+    <module>SpringDataRestApp</module>
+  </modules>
 
   <properties>
     <java.version>1.8</java.version>
