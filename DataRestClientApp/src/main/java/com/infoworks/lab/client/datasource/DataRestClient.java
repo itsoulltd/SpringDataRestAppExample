@@ -1,4 +1,4 @@
-package com.infoworks.lab.rest.client.datasource;
+package com.infoworks.lab.client.datasource;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.infoworks.lab.rest.models.Message;
@@ -16,7 +16,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.function.Consumer;
 
-public class RestDataSource<Value extends Any> extends SimpleDataSource<Object, Value> implements AutoCloseable{
+public class DataRestClient<Value extends Any> extends SimpleDataSource<Object, Value> implements AutoCloseable{
 
     private final URL baseUrl;
     private ExecutorService service;
@@ -26,15 +26,15 @@ public class RestDataSource<Value extends Any> extends SimpleDataSource<Object, 
     private HttpHeaders httpHeaders;
     private boolean enableLogging;
 
-    public RestDataSource(Class<? extends Any> type, URL baseUrl) {
+    public DataRestClient(Class<? extends Any> type, URL baseUrl) {
         this(type, baseUrl, new RestTemplate());
     }
 
-    public RestDataSource(Class<? extends Any> type,URL baseUrl, RestTemplate template) {
+    public DataRestClient(Class<? extends Any> type, URL baseUrl, RestTemplate template) {
         this(type, baseUrl, template, Executors.newSingleThreadExecutor());
     }
 
-    public RestDataSource(Class<? extends Any> type,URL baseUrl, RestTemplate template, ExecutorService service) {
+    public DataRestClient(Class<? extends Any> type, URL baseUrl, RestTemplate template, ExecutorService service) {
         this.anyClassType = type;
         this.baseUrl = baseUrl;
         this.service = service;

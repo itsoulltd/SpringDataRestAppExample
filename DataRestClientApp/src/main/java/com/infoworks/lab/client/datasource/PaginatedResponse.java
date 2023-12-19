@@ -1,4 +1,4 @@
-package com.infoworks.lab.rest.client.datasource;
+package com.infoworks.lab.client.datasource;
 
 import com.infoworks.lab.rest.models.Response;
 

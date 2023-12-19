@@ -10,6 +10,7 @@
 
   <modules>
     <module>SpringDataRestApp</module>
+    <module>DataRestClientApp</module>
   </modules>
 
   <properties>
