@@ -51,7 +51,7 @@ public class RestTemplateClient {
         HttpHeaders headers = new HttpHeaders();
         Map body = new HashMap();
         HttpEntity<Map> entity = new HttpEntity<>(body, headers);
-        //http://localhost:8080/api/data/passengers
+        //http://localhost:8080/passengers
         ResponseEntity<String> rs = template.exchange("/passengers"
                 , HttpMethod.GET
                 , entity
@@ -72,7 +72,7 @@ public class RestTemplateClient {
         HttpHeaders headers = new HttpHeaders();
         Map body = new HashMap();
         HttpEntity<Map> entity = new HttpEntity<>(body, headers);
-        String rootURL = "http://localhost:8080/api/data/passengers";
+        String rootURL = "http://localhost:8080/passengers";
         ResponseEntity<String> rs = template.exchange(rootURL
                 , HttpMethod.GET
                 , entity
@@ -85,7 +85,7 @@ public class RestTemplateClient {
     public void DataRestApisForPassengersType3() {
         //
         RestTemplate template = new RestTemplateBuilder()
-                .rootUri("http://localhost:8080/api/data/passengers")
+                .rootUri("http://localhost:8080/passengers")
                 .setConnectTimeout(Duration.ofMillis(5000))
                 .setReadTimeout(Duration.ofMillis(7000))
                 .build();
@@ -93,7 +93,7 @@ public class RestTemplateClient {
         HttpHeaders headers = new HttpHeaders();
         Map body = new HashMap();
         HttpEntity<Map> entity = new HttpEntity<>(body, headers);
-        //http://localhost:8080/api/data/passengers
+        //http://localhost:8080/passengers
         //FIX: Will throw exception if pass empty string in url:
         ResponseEntity<String> rs = template.exchange("/"
                 , HttpMethod.GET
@@ -115,7 +115,7 @@ public class RestTemplateClient {
         HttpHeaders headers = new HttpHeaders();
         Map body = new HashMap();
         HttpEntity<Map> entity = new HttpEntity<>(body, headers);
-        //http://localhost:8080/api/data/passengers?page=0&size=5
+        //http://localhost:8080/passengers?page=0&size=5
         String path = "/passengers?page={page}&size={size}";
         int page = 0, size = 5;
         ResponseEntity<String> rs = template.exchange(path
@@ -285,7 +285,7 @@ public class RestTemplateClient {
         HttpHeaders headers = new HttpHeaders();
         Map body = new HashMap();
         HttpEntity<Map> entity = new HttpEntity<>(body, headers);
-        //http://localhost:8080/api/data/passengers/search
+        //http://localhost:8080/passengers/search
         ResponseEntity<String> rs = template.exchange("/passengers/search"
                 , HttpMethod.GET
                 , entity
@@ -306,7 +306,7 @@ public class RestTemplateClient {
         HttpHeaders headers = new HttpHeaders();
         Map body = new HashMap();
         HttpEntity<Map> entity = new HttpEntity<>(body, headers);
-        //http://localhost:8080/api/data/passengers/search/findByAgeLimit?min=18&max=20
+        //http://localhost:8080/passengers/search/findByAgeLimit?min=18&max=20
         String path = "/passengers/search/findByAgeLimit?min={min}&max={max}";
         int min = 18, max = 20;
         ResponseEntity<String> rs = template.exchange(path
