@@ -10,7 +10,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @EnableSwagger2
 @ComponentScan(basePackages = {"com.infoworks.lab.controllers"
-        , "com.infoworks.lab.services"
         , "com.infoworks.lab.webapp.config"
         , "com.infoworks.lab.domain"})
 public class SpringDataRestApp extends SpringBootServletInitializer {
